@@ -1,0 +1,14 @@
+"""
+Unique employee ID - "Yes" or "No"
+"""
+
+
+n = int(input())
+
+for _ in range(n):
+    arr = list(map(int, input().split()))
+
+    if len(arr) == len(set(arr)):
+        print("Yes")
+    else:
+        print("No")

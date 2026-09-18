@@ -1,0 +1,17 @@
+"""
+Array - min / max
+"""
+
+def min_max(arr):
+    minimum=arr[0]
+    maximum=arr[0]
+    for i in range(len(arr)):
+        if arr[i]>maximum:
+            maximum=arr[i]
+        if arr[i]<minimum:
+            minimum=arr[i]
+    print("Min:",minimum)
+    print("Max:",maximum)
+
+arr=[2,3,4,5,3,2,6,1,9,8,7]
+min_max(arr)

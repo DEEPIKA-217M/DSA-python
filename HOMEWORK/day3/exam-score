@@ -1,0 +1,47 @@
+"""
+exam-score-validation
+"""
+
+
+import math
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+print("Scores:")
+
+for i in range(n):
+    print(arr[i], end=" ")
+    if (i + 1) % 4 == 0:
+        print()
+
+# Average
+average = sum(arr) / n
+print(f"\nAverage: {average:.2f}")
+
+# Lowest and highest
+print("Lowest Score:", min(arr))
+print("Highest Score:", max(arr))
+
+# Standard deviation
+sum_square = 0
+
+print("\nScore  Deviation")
+
+for score in arr:
+    deviation = score - average
+    print(f"{score}     {deviation:.2f}")
+    sum_square += deviation ** 2
+
+sd = math.sqrt(sum_square / n)
+
+print(f"\nStandard Deviation: {sd:.2f}")
+
+# Count scores within one standard deviation
+count = 0
+
+for score in arr:
+    if average - sd <= score <= average + sd:
+        count += 1
+
+print("Scores within one standard deviation:", count)
