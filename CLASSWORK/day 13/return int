@@ -1,0 +1,28 @@
+'''
+without buildin fucntions
+'''
+
+
+string = input()
+num1_str, op, num2_str = string.split()
+num1, num2 = int(num1_str), int(num2_str)
+if op == '+': result = num1 + num2
+elif op == '-': result = num1 - num2
+elif op == '*': result = num1 * num2
+elif op == '/':
+    quotient = num1 // num2
+    remainder = num1%num2 
+    result =[quotient,remainder]
+print(result)
+
+
+'''
+with buildin functions
+'''
+str = input()
+part = str.split("-")
+num1 = int(part[0].strip())
+num2 = int(part[1].strip())
+result = num1 - num2
+
+print(result)
